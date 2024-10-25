@@ -1,0 +1,151 @@
+// Biến để quản lý màu sắc
+$primary-color: #198754;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$border-radius: 8px;
+
+.container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; 
+  background-color: $secondary-color; 
+
+  .loginContainer {
+    display: flex;
+    background-color: white; 
+    width: 1000px;
+    padding: 50px;
+    border-radius: $border-radius; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+     &:hover {
+      transform: translateY(-5px); 
+    }
+    .loginBox {
+      flex: 1; 
+      padding: 40px; 
+      color: $primary-color; 
+    }
+
+    .imageContainer {
+      flex: 1; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      background-color: white; 
+
+      img {
+        width: 100%; 
+        object-fit: cover; 
+      }
+    }
+  }
+
+  .playImage {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .inputGroup {
+    margin-bottom: 20px;
+    text-align: left;
+
+    label {
+      display: flex;
+      align-items: center; 
+      margin-bottom: 8px;
+      color: $text-color; 
+
+      .inputIcon {
+        margin-right: 10px;
+        color: $text-color; 
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd; 
+      border-radius: $border-radius;
+
+      &:focus {
+        border-color: $primary-color; 
+        outline: none;
+        box-shadow: 0 0 5px rgba($primary-color, 0.5); 
+      }
+    }
+
+    .inputWrapper {
+      position: relative; 
+
+      input {
+        width: 100%;
+        padding: 10px 40px 10px 10px; 
+        border: 1px solid #ddd; 
+        border-radius: $border-radius;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: $primary-color; 
+          outline: none;
+          box-shadow: 0 0 5px rgba($primary-color, 0.5); 
+        }
+      }
+
+      .eyeButton {
+        background: none; 
+        border: none; 
+        cursor: pointer; 
+        position: absolute; 
+        right: 10px; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        color: $text-color; 
+        padding: 0; 
+
+        &:hover {
+          color: darken($text-color, 10%); 
+        }
+      }
+    }
+  }
+
+  .rememberMe {
+    margin-bottom: 20px;
+    color: $text-color; 
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color !important; 
+    color: white;
+    border: none !important;
+    border-radius: $border-radius;
+    font-weight: bold;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: darken($primary-color, 5%) !important; 
+      transition: background-color 0.5s; 
+      transform: scale(1.05); 
+      transition: background-color 0.5s;
+
+    }
+  }
+
+  .signupLink {
+    margin-top: 20px;
+    font-size: 14px;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
